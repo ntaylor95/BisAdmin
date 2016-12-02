@@ -1,0 +1,50 @@
+﻿#header
+{
+    width: 100%;
+    height: 0px;
+    padding: 0px;
+    margin: 0px !important;
+}
+
+#header .logo {
+    margin: 5px;
+    width: 135px;
+    float: left;
+    border-width: 0px;
+}
+
+#header .logout {
+    margin: 8px 0 0 0;
+    width: 64px;
+    float: right;
+}
+
+#divCaseCounts {
+    float: right;
+    margin: 8px 0px 0 0;
+    width: 164px;
+    height: 0px;
+    text-align: left;
+    position: absolute;
+    right: 0px;
+    top: 24px;
+}
+
+#divCaseCounts span {
+    display: inline-block;
+    font-size: 12px;
+    color: #fff;
+    border: 1px solid #ddd;
+    background: Gray;
+    border-radius: 4px;
+    padding: 3px 6px;
+    width: 64px;
+}
+
+#divCaseCounts span.urgent {
+    background: #a94442;
+    color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 3px 6px;
+}

@@ -1,0 +1,18 @@
+﻿[
+  {
+    "outputFile": "assets/main.css",
+    "inputFile": "assets/main.scss"
+  },
+  {
+    "outputFile": "app/master/master.header.css",
+    "inputFile": "app/master/master.header.scss"
+  },
+  {
+    "outputFile": "app/master/master.nav.css",
+    "inputFile": "app/master/master.nav.scss"
+  },
+  {
+    "outputFile": "app/master/master.footer.css",
+    "inputFile": "app/master/master.footer.scss"
+  }
+]

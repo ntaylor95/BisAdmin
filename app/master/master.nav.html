@@ -1,0 +1,86 @@
+﻿<nav class="navbar navbar-default">
+    <div id="navbar" class="container-fluid">
+
+        <div style="height:0px;margin-left:-10px;">
+            <a href="#ctl00_ctl00_cphMain_menuPrimary_SkipLink">
+                <img alt="Skip Navigation Links" src="/WebResource.axd?d=rKN1opQVoh180LaGjXZZkK3zC5ctL5dAYxpzvzdJjPZZd3BKRFAU2ww2pPfmxbZ7VrkU9l7LhlxHxowQLcg_CQ2&amp;t=635792847671809273" width="0" height="0" style="border-width:0px;">
+            </a>
+        </div>
+
+        <div class="primaryNavMenu" id="ctl00_ctl00_cphMain_menuPrimary" style="float: left;">
+            <ul class="level1 static" tabindex="0" role="menubar" style="position: relative; width: auto; float: left; margin-top:-5px;">
+                <!--<li *ngFor="#nav of navs; #isFirst = first; #i = index;" (click)="selectedStatus[i]=!selectedStatus[i]; select(i, nav)" role="menuitem" class="static" style="position: relative; float: left;">
+                    <a class="level1 static" [class.selected]="isFirst" tabindex="-1">{{ nav.name }}</a>
+                </li>-->
+
+                <li *ngFor="#nav of navs;" [routerLink]="nav.router" (click)="select(nav);" role="menuitem" class="static" style="position: relative; float: left;">
+                    <a class="level1 static">{{ nav.name }}</a>
+                </li>
+
+                <!--<li role="menuitem" class="static" style="position: relative; float: left;"><a class="level1 static" href="/Accounts/Default.aspx" tabindex="-1">Accounts</a></li>
+                <li role="menuitem" class="static" style="position: relative; float: left;"><a class="level1 static" href="/Prospect/Default.aspx" tabindex="-1">Prospect</a></li>
+                <li role="menuitem" class="static" style="position: relative; float: left;"><a class="level1 static" href="/TaxAgency/Default.aspx" tabindex="-1">Tax Agency</a></li>
+                <li role="menuitem" class="static" style="position: relative; float: left;"><a class="level1 static" href="/Utilities/Default.aspx" tabindex="-1">Utilities</a></li>-->
+            </ul>
+        </div>
+        <div style="clear: left;"></div>
+        <a id="ctl00_ctl00_cphMain_menuPrimary_SkipLink"></a>
+        <div style="height:0px;margin-left:-10px;">
+            <a href="#ctl00_ctl00_cphMain_menuSecondary_SkipLink" id="ctl00_ctl00_cphMain_menuSecondary_SkipLink">
+                <img alt="Skip Navigation Links" src="/WebResource.axd?d=rKN1opQVoh180LaGjXZZkK3zC5ctL5dAYxpzvzdJjPZZd3BKRFAU2ww2pPfmxbZ7VrkU9l7LhlxHxowQLcg_CQ2&amp;t=635792847671809273" width="0" height="0" style="border-width:0px;">
+            </a>
+            </div>
+
+            <!--<div class="secondaryNavMenu collapse navbar-collapse" id="ctl00_ctl00_cphMain_menuSecondary" style="float: left;">
+                <ul class="level1 static nav navbar-nav" tabindex="0" role="menubar" style="position: relative; width: auto; float: left;" [class.dropdown]="nav2.children != null && nav2.children.length > 0" class="static" style="position: relative; float: left;">
+                    <li *ngFor="#nav2 of selectedNav; #isFirst = first;" [routerLink]="nav2.router">
+                        <a class="level1 static" data-toggle="dropdown" [class.dropdown-toggle]="nav2.children != null && nav2.children.length > 0" role="button" aria-haspopup="true" aria-expanded="false">{{ nav2.name }}</a>
+                        <ul *ngIf="nav2.children != null && nav2.children.length > 0" class="dropdown-menu">
+                            <li *ngFor="#child of nav2.children" [routerLink]="child.router">
+                                <a>{{ child.name }}</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>-->
+
+        <div class="secondaryNavMenu collapse navbar-collapse" id="ctl00_ctl00_cphMain_menuSecondary" style="float: left;">
+        <ul class="level1 static nav navbar-nav" tabindex="0" role="menubar" style="position: relative; width: auto; float: left;">
+            <li *ngFor="#nav2 of selectedNav; #i = index; #isFirst2 = first;" [routerLink]="nav2.router" (click)="selectedStatus[i]=!selectedStatus[i];" role="menuitem" [class.open]="isFirst2" [class.dropdown]="nav2.children != null && nav2.children.length > 0" class="static" style="position: relative; float: left;">
+                <a class="level1 static" data-toggle="dropdown" [class.dropdown-toggle]="nav2.children != null && nav2.children.length > 0" role="button" aria-haspopup="true" aria-expanded="false">{{ nav2.name }}</a>
+                <ul *ngIf="nav2.children != null && nav2.children.length > 0 && selectedStatus[i]" class="dropdown-menu">
+                    <li *ngFor="#child of nav2.children" [routerLink]="child.router">
+                        <a>{{ child.name }}</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+
+           <master-nav-secondary *ngIf="selectedNav" [secondaryNavs]="selectedNav">Loading Blah Secondary Menu...</master-nav-secondary>
+
+            <!--<a href="#ctl00_ctl00_cphMain_menuSecondary_SkipLink"><img alt="Skip Navigation Links" src="/WebResource.axd?d=rKN1opQVoh180LaGjXZZkK3zC5ctL5dAYxpzvzdJjPZZd3BKRFAU2ww2pPfmxbZ7VrkU9l7LhlxHxowQLcg_CQ2&amp;t=635792847671809273" width="0" height="0" style="border-width:0px;"></a><div class="secondaryNavMenu" id="ctl00_ctl00_cphMain_menuSecondary" style="float: left;">
+            <ul class="level1 static" tabindex="0" role="menubar" style="position: relative; width: auto; float: left;">
+                <li role="menuitem" class="static" style="position: relative; float: left;"><a class="level1 selected static" href="/AdminHome.aspx" tabindex="-1">Main</a></li>
+                <li role="menuitem" class="static" style="position: relative; float: left;"><a class="level1 static" href="/CaseManagerCaseSearch.aspx" tabindex="-1">Case Search</a></li>
+            </ul>
+        </div><div style="clear: left;"></div><a id="ctl00_ctl00_cphMain_menuSecondary_SkipLink"></a>
+
+
+
+        <div id="ctl00_ctl00_cphMain_divTertiaryHoverMenus"></div>-->
+        </div>
+        <div style="clear: left;"></div><a id="ctl00_ctl00_cphMain_menuSecondary_SkipLink"></a>
+</nav>
+
+<!--<ul>
+    <li *ngFor="#nav of navs" (click)="select(nav)">
+        {{ nav.id }} - {{ nav.name }}
+        <ul>
+            <li *ngFor="#nav of nav.children" (click)="select(nav)">
+                {{ nav.id }} - {{ nav.name }}
+            </li>
+        </ul>
+    </li>
+</ul>-->

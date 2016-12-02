@@ -1,0 +1,162 @@
+﻿{
+  "data": [
+    {
+      "id": 14,
+      "name": "Home",
+      "router": [ "HomeDashboard" ],
+      "children": [
+        {
+          "id": 24,
+          "name": "Main",
+          "router": [ "HomeDashboard" ]
+        },
+        {
+          "id": 24,
+          "name": "Case Search",
+          "router": [ "HomeDashboard" ]
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "name": "Accounts",
+      "router": ["AccountSearch"],
+      "children": [
+        {
+          "id": 24,
+          "name": "Dashboard",
+          "router": [ "AccountSearch" ]
+        },
+        {
+          "id": 32,
+          "name": "General",
+          "router": [ "AccountSearch" ]
+        },
+        {
+          "id": 321,
+          "name": "Services",
+          "router": [ "ProspectSearch" ]
+        },
+        {
+          "id": 321,
+          "name": "Tax Accounts",
+          "router": [ "ProspectSearch" ]
+        },
+        {
+          "id": 322,
+          "name": "Employees",
+          "router": [ "AccountSearch" ]
+        },
+        {
+          "id": 321,
+          "name": "Payroll",
+          "router": [ "AccountSearch" ]
+        },
+        {
+          "id": 321,
+          "name": "Taxes",
+          "router": [ "AccountSearch" ]
+        },
+        {
+          "id": 321,
+          "name": "Case Manager",
+          "router": [ "AccountSearch" ]
+        },
+        {
+          "id": 321,
+          "name": "Pending Changes",
+          "router": [ "AccountSearch" ]
+        },
+        {
+          "id": 321,
+          "name": "Online File",
+          "router": [ "AccountSearch" ]
+        },
+        {
+          "id": 321,
+          "name": "Service Test",
+          "router": [ "AccountSearch" ]
+        }
+      ]
+    },
+    {
+      "id": 413,
+      "name": "Prospect",
+      "router": ["ProspectSearch"],
+      "children": [
+        {
+          "id": 321,
+          "name": "Dashboard",
+          "router": [ "ProspectSearch" ]
+        },
+        {
+          "id": 321,
+          "name": "General",
+          "router": [ "ProspectSearch" ]
+        },
+        {
+          "id": 321,
+          "name": "Employer",
+          "router": [ "ProspectSearch" ],
+          "children": [
+            {
+              "id": 321,
+              "name": "Summary",
+              "router": [ "ProspectSearch" ]
+            },
+            {
+              "id": 321,
+              "name": "Employer",
+              "router": [ "ProspectEmployer" ]
+            },
+            {
+              "id": 321,
+              "name": "Address",
+              "router": [ "ProspectWorksiteAddress" ]
+            },
+            {
+              "id": 321,
+              "name": "Spouse/Partner",
+              "router": [ "ProspectSearch" ]
+            }
+          ]
+        },
+        {
+          "id": 321,
+          "name": "Employee",
+          "router": [ "ProspectSearch" ]
+        },
+        {
+          "id": 321,
+          "name": "Payments",
+          "router": [ "ProspectSearch" ]
+        },
+        {
+          "id": 321,
+          "name": "Summary",
+          "router": [ "ProspectSearch" ]
+        },
+        {
+          "id": 321,
+          "name": "Case Manager",
+          "router": [ "ProspectSearch" ]
+        },
+        {
+          "id": 321,
+          "name": "Prospect Listing",
+          "router": [ "ProspectSearch" ]
+        }
+      ]
+    },
+    {
+      "id": 420,
+      "name": "Tax Agency",
+      "router": [ "TaxAgencyDashboard" ]
+    },
+    {
+      "id": 386,
+      "name": "Utilities",
+      "router": [ "UtilitiesDashboard" ]
+    }
+  ]
+}
